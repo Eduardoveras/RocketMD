@@ -1,0 +1,48 @@
+<%# views/devise/sessions/new.html.erb %>
+
+<div class="">
+
+  <div id="wrapper">
+    <div id="login" class="animate form">
+      <section class="login_content">
+        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+            <%= devise_error_messages! %>
+            <h1>Create Account</h1>
+            <div>
+              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder =>"Username",  :required => ""  %>
+
+            </div>
+            <div>
+              <% if @minimum_password_length %>
+                  <em>(<%= @minimum_password_length %> characters minimum)</em>
+              <% end %><br />
+              <%= f.password_field :password, autofocus: true, :class => "form-control", :placeholder =>"Password",  :required => "",autocomplete: "off"   %>
+            </div>
+            <div>
+              <%= f.password_field :password_confirmation, autofocus: true, :class => "form-control", :placeholder =>"Confirm Password",  :required => "",autocomplete: "off"   %>
+
+            </div>
+            <div>
+              <%= f.submit "Sign up", :class => "btn btn-default submit" %>
+            </div>
+            <div class="clearfix"></div>
+            <div class="separator">
+
+              <%= render "devise/shared/links" %>
+
+              <div class="clearfix"></div>
+              <br />
+              <div>
+                <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Gentelella Alela!</h1>
+
+                <p>©2017 All Rights Reserved. Gentelella Alela! is a Bootstrap 3 template. Privacy and Terms</p>
+              </div>
+            </div>
+        <% end %>
+        <!-- form -->
+      </section>
+      <!-- content -->
+    </div>
+  </div>
+</div>
+
