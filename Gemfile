@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-
+ruby '2.3.1'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.0', '>= 5.0.0.1'
 
@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 #Assets
-gem "font-awesome-rails"
+#gem "font-awesome-rails"
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # sendgrrid on heroku
@@ -36,7 +36,7 @@ gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
 
 # Authentication with devise gem
-gem 'devise'
+gem 'devise','4.2.0'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
