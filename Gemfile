@@ -19,7 +19,7 @@ gem 'coffee-rails', '~> 4.1.0'
 # gem 'therubyracer', platforms: :ruby
 
 #Assets
-#gem "font-awesome-rails"
+gem 'font-awesome-rails'
 gem 'bootstrap-sass', '~> 3.3.6'
 
 # sendgrrid on heroku
