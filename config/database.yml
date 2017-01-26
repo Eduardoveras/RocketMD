@@ -83,7 +83,7 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: ClinicHelper_production
-  username: ClinicHelper
-  password: <%= ENV['CLINICHELPER_DATABASE_PASSWORD'] %>
+  url: <%= ENV["DATABASE_URL"] %>
+  encoding: unicode
+  pool: 99
+  timeout: 5000
