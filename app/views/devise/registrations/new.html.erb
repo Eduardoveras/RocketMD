@@ -9,8 +9,10 @@
             <%= devise_error_messages! %>
             <h1>Create Account</h1>
             <div>
+              <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder =>"Name",  :required => ""  %>
+            </div>
+            <div>
               <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder =>"Email",  :required => ""  %>
-
             </div>
             <div>
               <% if @minimum_password_length %>
