@@ -4,21 +4,25 @@ class PatientsController < ApplicationController
   # GET /patients
   # GET /patients.json
   def index
+    @page_title='Patients'
     @patients = Patient.all
   end
 
   # GET /patients/1
   # GET /patients/1.json
   def show
+    @page_title='Patient Details'
   end
 
   # GET /patients/new
   def new
+    @page_title='Create new patient'
     @patient = Patient.new
   end
 
   # GET /patients/1/edit
   def edit
+    @page_title='Edit Patient'
   end
 
   # POST /patients
