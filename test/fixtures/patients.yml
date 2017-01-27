@@ -1,0 +1,41 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  first_name: MyString
+  last_name: MyString
+  identification: MyString
+  date_of_birth: 2017-01-26
+  male: false
+  occupation: MyString
+  religion: MyString
+  country: MyString
+  city: MyString
+  address: MyString
+  nationality: MyString
+  blood_type: MyString
+  phone: MyString
+  alt_phone: MyString
+  email: MyString
+  insurance_number: MyString
+  insurance_company: MyString
+  insurance_plan: MyString
+
+two:
+  first_name: MyString
+  last_name: MyString
+  identification: MyString
+  date_of_birth: 2017-01-26
+  male: false
+  occupation: MyString
+  religion: MyString
+  country: MyString
+  city: MyString
+  address: MyString
+  nationality: MyString
+  blood_type: MyString
+  phone: MyString
+  alt_phone: MyString
+  email: MyString
+  insurance_number: MyString
+  insurance_company: MyString
+  insurance_plan: MyString

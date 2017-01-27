@@ -1,0 +1,61 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Patients</h1>
+
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>First name</th>
+      <th>Last name</th>
+      <th>Identification</th>
+      <th>Date of birth</th>
+      <th>Male</th>
+      <th>Occupation</th>
+      <th>Religion</th>
+      <th>Country</th>
+      <th>City</th>
+      <th>Address</th>
+      <th>Nationality</th>
+      <th>Blood type</th>
+      <th>Phone</th>
+      <th>Alt phone</th>
+      <th>Email</th>
+      <th>Insurance number</th>
+      <th>Insurance company</th>
+      <th>Insurance plan</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @patients.each do |patient| %>
+      <tr>
+        <td><%= patient.first_name %></td>
+        <td><%= patient.last_name %></td>
+        <td><%= patient.identification %></td>
+        <td><%= patient.date_of_birth %></td>
+        <td><%= patient.male %></td>
+        <td><%= patient.occupation %></td>
+        <td><%= patient.religion %></td>
+        <td><%= patient.country %></td>
+        <td><%= patient.city %></td>
+        <td><%= patient.address %></td>
+        <td><%= patient.nationality %></td>
+        <td><%= patient.blood_type %></td>
+        <td><%= patient.phone %></td>
+        <td><%= patient.alt_phone %></td>
+        <td><%= patient.email %></td>
+        <td><%= patient.insurance_number %></td>
+        <td><%= patient.insurance_company %></td>
+        <td><%= patient.insurance_plan %></td>
+        <td><%= link_to 'Show', patient %></td>
+        <td><%= link_to 'Edit', edit_patient_path(patient) %></td>
+        <td><%= link_to 'Destroy', patient, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Patient', new_patient_path %>

@@ -27,9 +27,9 @@
             </li>
             <% if user_signed_in? %>
                 <li>
-                  <%#= link_to(' x', destroy_user_session_path, :method => :delete) do %>
+                  <%= link_to( destroy_user_session_path, :method => :delete) do %>
                       Log Out<i class="fa fa-sign-out pull-right"></i>
-                  <%# end%>
+                  <% end%>
                 </li>
             <% end %>
           </ul>

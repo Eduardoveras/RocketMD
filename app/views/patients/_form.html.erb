@@ -1,0 +1,107 @@
+<%= form_for(patient) do |f| %>
+  <% if patient.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(patient.errors.count, "error") %> prohibited this patient from being saved:</h2>
+
+      <ul>
+      <% patient.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :identification %>
+    <%= f.text_field :identification %>
+  </div>
+
+  <div class="field">
+    <%= f.label :date_of_birth %>
+    <%= f.date_select :date_of_birth %>
+  </div>
+
+  <div class="field">
+    <%= f.label :male %>
+    <%= f.check_box :male %>
+  </div>
+
+  <div class="field">
+    <%= f.label :occupation %>
+    <%= f.text_field :occupation %>
+  </div>
+
+  <div class="field">
+    <%= f.label :religion %>
+    <%= f.text_field :religion %>
+  </div>
+
+  <div class="field">
+    <%= f.label :country %>
+    <%= f.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= f.label :city %>
+    <%= f.text_field :city %>
+  </div>
+
+  <div class="field">
+    <%= f.label :address %>
+    <%= f.text_field :address %>
+  </div>
+
+  <div class="field">
+    <%= f.label :nationality %>
+    <%= f.text_field :nationality %>
+  </div>
+
+  <div class="field">
+    <%= f.label :blood_type %>
+    <%= f.text_field :blood_type %>
+  </div>
+
+  <div class="field">
+    <%= f.label :phone %>
+    <%= f.text_field :phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :alt_phone %>
+    <%= f.text_field :alt_phone %>
+  </div>
+
+  <div class="field">
+    <%= f.label :email %>
+    <%= f.text_field :email %>
+  </div>
+
+  <div class="field">
+    <%= f.label :insurance_number %>
+    <%= f.text_field :insurance_number %>
+  </div>
+
+  <div class="field">
+    <%= f.label :insurance_company %>
+    <%= f.text_field :insurance_company %>
+  </div>
+
+  <div class="field">
+    <%= f.label :insurance_plan %>
+    <%= f.text_field :insurance_plan %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
