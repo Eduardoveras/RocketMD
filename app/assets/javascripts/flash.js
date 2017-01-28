@@ -1,6 +1,10 @@
-$(function() {
-    $('#flash').delay(500).fadeIn('normal', function() {
-        $(this).delay(2500).fadeOut();
+// flashes.js
+$(document).ready(function() {
+    $(window).bind('rails:flash', function(e, params) {
+        new PNotify({
+            title: params.type,
+            text: params.message,
+            type: params.type
+        });
     });
 });
-

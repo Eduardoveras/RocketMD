@@ -39,7 +39,10 @@
 
 //= require  js/nprogress.js
 
+//= require pnotify
+//= require unobtrusive_flash
 //= require flash.js
+
 
 
 

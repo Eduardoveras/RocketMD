@@ -42,18 +42,6 @@
 
 <div class="container body">
 
-  <% flash.each do |key, value| %>
-      <div align="center" id="flash" class="alert alert-<%= key %>">
-        <a href="#" data-dismiss="alert" class="close">×</a>
-        <ul style="text-align: center">
-          <l>
-            <b> <%= value %>  </b>
-          </l>
-        </ul>
-      </div>
-  <% end %>
-
-
   <%= yield %>
 
   <%= render "partials/footer" %>
