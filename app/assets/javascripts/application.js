@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 
 //= require jquery_ujs
+//= require datatables
 //= require turbolinks
 
 //= require js/flot/jquery.flot.js
@@ -42,7 +43,5 @@
 //= require pnotify
 //= require unobtrusive_flash
 //= require flash.js
-
-
 
 

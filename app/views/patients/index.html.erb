@@ -2,7 +2,13 @@
 
 <h1>Patients</h1>
 
-<table class="table table-striped">
+<br>
+
+<%= link_to 'New Patient', new_patient_path, class: 'btn btn-default'%>
+<br>
+
+
+<table id="datatable" class="table table-striped">
   <thead>
     <tr>
       <th>First name</th>
@@ -23,7 +29,9 @@
       <th>Insurance number</th>
       <th>Insurance company</th>
       <th>Insurance plan</th>
-      <th colspan="3"></th>
+      <th>Show</th>
+      <th>Edit</th>
+      <th>Delete</th>
     </tr>
   </thead>
 
@@ -56,6 +64,9 @@
   </tbody>
 </table>
 
-<br>
 
-<%= link_to 'New Patient', new_patient_path %>
+<script>
+    $(document).ready(function() {
+        $("#datatable").dataTable();
+    });
+</script>
