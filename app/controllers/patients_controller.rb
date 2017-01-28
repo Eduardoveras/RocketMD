@@ -7,7 +7,7 @@ class PatientsController < ApplicationController
   # GET /patients.json
   def index
     @page_title='Patients'
-    @patients = Patient.all
+    @patients = current_user.patients
   end
 
   # GET /patients/1
