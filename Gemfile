@@ -24,6 +24,8 @@ gem 'bootstrap-sass', '~> 3.3.6'
 gem 'pnotify-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'jquery-datatables'
+gem 'bootstrap-datepicker-rails'
+
 
 
 

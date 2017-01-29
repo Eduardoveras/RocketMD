@@ -11,12 +11,12 @@
 // require datatables/extensions/FixedColumns/dataTables.fixedColumns
 // require datatables/extensions/FixedHeader/dataTables.fixedHeader
 // require datatables/extensions/KeyTable/dataTables.keyTable
-// require datatables/extensions/Responsive/dataTables.responsive
-// require datatables/extensions/RowReorder/dataTables.rowReorder
-// require datatables/extensions/Scroller/dataTables.scroller
-// require datatables/extensions/Select/dataTables.select
+//= require datatables/extensions/Responsive/dataTables.responsive
+//= require datatables/extensions/RowReorder/dataTables.rowReorder
+//= require datatables/extensions/Scroller/dataTables.scroller
+//= require datatables/extensions/Select/dataTables.select
 
 //= require datatables/dataTables.bootstrap
-// require datatables/extensions/AutoFill/autoFill.bootstrap
-// require datatables/extensions/Buttons/buttons.bootstrap
-// require datatables/extensions/Responsive/responsive.bootstrap
+//= require datatables/extensions/AutoFill/autoFill.bootstrap
+//= require datatables/extensions/Buttons/buttons.bootstrap
+//= require datatables/extensions/Responsive/responsive.bootstrap

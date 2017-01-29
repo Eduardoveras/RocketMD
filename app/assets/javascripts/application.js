@@ -39,9 +39,13 @@
 //= require js/pace/pace.min.js
 
 //= require  js/nprogress.js
+//= require bootstrap-datepicker
 
 //= require pnotify
 //= require unobtrusive_flash
 //= require flash.js
+
+
+
 
 

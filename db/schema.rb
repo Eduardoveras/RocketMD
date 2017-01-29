@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170128025233) do
+ActiveRecord::Schema.define(version: 20170129184910) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -21,21 +21,12 @@ ActiveRecord::Schema.define(version: 20170128025233) do
     t.string   "identification"
     t.date     "date_of_birth"
     t.boolean  "male"
-    t.string   "occupation"
-    t.string   "religion"
-    t.string   "country"
-    t.string   "city"
     t.string   "address"
-    t.string   "nationality"
-    t.string   "blood_type"
     t.string   "phone"
     t.string   "alt_phone"
     t.string   "email"
-    t.string   "insurance_number"
-    t.string   "insurance_company"
-    t.string   "insurance_plan"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",     null: false
+    t.datetime "updated_at",     null: false
     t.integer  "user_id"
     t.index ["user_id"], name: "index_patients_on_user_id", using: :btree
   end
