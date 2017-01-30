@@ -10,10 +10,30 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170129184910) do
+ActiveRecord::Schema.define(version: 20170130220328) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "Clinics_Patients", id: false, force: :cascade do |t|
+    t.integer "clinic_id",  null: false
+    t.integer "patient_id", null: false
+    t.index ["clinic_id", "patient_id"], name: "index_Clinics_Patients_on_clinic_id_and_patient_id", using: :btree
+    t.index ["patient_id", "clinic_id"], name: "index_Clinics_Patients_on_patient_id_and_clinic_id", using: :btree
+  end
+
+  create_table "Clinics_Users", id: false, force: :cascade do |t|
+    t.integer "clinic_id", null: false
+    t.integer "user_id",   null: false
+    t.index ["clinic_id", "user_id"], name: "index_Clinics_Users_on_clinic_id_and_user_id", using: :btree
+    t.index ["user_id", "clinic_id"], name: "index_Clinics_Users_on_user_id_and_clinic_id", using: :btree
+  end
+
+  create_table "clinics", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "patients", force: :cascade do |t|
     t.string   "first_name"

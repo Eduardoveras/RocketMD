@@ -4,7 +4,9 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
-  has_many :patients, dependent: :destroy
+  has_and_belongs_to_many :clinic
+
+  #TODO: Implement "accepts_nested_attributes_for:" method, and update registration form
 
 
 end
