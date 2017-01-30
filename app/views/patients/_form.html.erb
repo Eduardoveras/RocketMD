@@ -42,46 +42,49 @@
 
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :first_name, class: 'form-control has-feedback-left', id: 'inputSuccess2', placeholder: 'First Name' %>
+              <%= f.text_field :first_name, class: 'form-control has-feedback-left', id: 'inputSuccess2', placeholder: 'First Name', :autocomplete => :off %>
               <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :last_name, class: 'form-control', id: 'inputSuccess3', placeholder: 'Last Name' %>
+              <%= f.text_field :last_name, class: 'form-control', id: 'inputSuccess3', placeholder: 'Last Name', :autocomplete => :off %>
               <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :identification, class: 'form-control has-feedback-left', id: 'inputSuccess4', placeholder: 'ID Number' %>
+              <%= f.text_field :identification, class: 'form-control has-feedback-left', id: 'inputSuccess4', placeholder: 'ID Number', :autocomplete => :off %>
               <span class="fa fa-calendar form-control-feedback left" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :phone, class: "form-control", id: 'inputSuccess5', placeholder: 'Phone' %>
+              <%= f.text_field :phone, class: "form-control", id: 'inputSuccess5', placeholder: 'Phone', :autocomplete => :off %>
               <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :date_of_birth, class: 'form-control has-feedback-left datepicker', placeholder: 'Date of Birth' %>
+              <%= f.text_field :date_of_birth, class: 'form-control has-feedback-left datepicker', placeholder: 'Date of Birth' , :autocomplete => :off%>
               <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :alt_phone, class: 'form-control', placeholder: 'Cellphone' %>
+              <%= f.text_field :alt_phone, class: 'form-control', placeholder: 'Cellphone', :autocomplete => :off %>
               <span class="fa fa-phone form-control-feedback right" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.text_field :address, class: 'form-control has-feedback-left', placeholder: 'Adress' %>
+              <%= f.text_field :address, class: 'form-control has-feedback-left', placeholder: 'Adress', :autocomplete => :off %>
               <span class="fa fa-address-card form-control-feedback left" aria-hidden="true"></span>
             </div>
 
             <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-              <%= f.email_field :email, class: 'form-control', placeholder: 'Email' %>
+              <%= f.email_field :email, class: 'form-control', placeholder: 'Email', :autocomplete => :off %>
               <span class="fa fa-envelope form-control-feedback right" aria-hidden="true"></span>
             </div>
 
-            <%= f.check_box :male ,class: 'form-control' %>
+            <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
+              <%= f.check_box :male ,class: 'form-control' %>
+              <span class=" form-control-feedback right" aria-hidden="true">Male?</span>
+            </div>
 
 
             <div class="ln_solid"></div>
@@ -102,6 +105,10 @@
 
     <script type="text/javascript">
         $(document).ready(function () {
-            $('.datepicker').datepicker();
+            var date = new Date();
+            date.setDate(date.getDate()-1);
+            $('.datepicker').datepicker({
+                endDate: date
+            });
         });
     </script>
