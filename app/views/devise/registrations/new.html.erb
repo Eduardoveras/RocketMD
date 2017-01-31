@@ -8,20 +8,27 @@
         <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
             <%= devise_error_messages! %>
             <h1>Create Account</h1>
+
+            <%= f.fields_for(:clinic, Clinic.new) do |clinic_form| %>
+                <div>
+                  <%= clinic_form.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Clinic Name", :required => "" %>
+                </div>
+            <% end %>
+
             <div>
-              <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder =>"Name",  :required => ""  %>
+              <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Name", :required => "" %>
             </div>
             <div>
-              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder =>"Email",  :required => ""  %>
+              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email", :required => "" %>
             </div>
             <div>
               <% if @minimum_password_length %>
                   <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br />
-              <%= f.password_field :password, autofocus: true, :class => "form-control", :placeholder =>"Password",  :required => "",autocomplete: "off"   %>
+              <% end %><br/>
+              <%= f.password_field :password, autofocus: true, :class => "form-control", :placeholder => "Password", :required => "", autocomplete: "off" %>
             </div>
             <div>
-              <%= f.password_field :password_confirmation, autofocus: true, :class => "form-control", :placeholder =>"Confirm Password",  :required => "",autocomplete: "off"   %>
+              <%= f.password_field :password_confirmation, autofocus: true, :class => "form-control", :placeholder => "Confirm Password", :required => "", autocomplete: "off" %>
 
             </div>
             <div>
@@ -33,7 +40,7 @@
               <%= render "devise/shared/links" %>
 
               <div class="clearfix"></div>
-              <br />
+              <br/>
               <div>
                 <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Rocket MD</h1>
 
