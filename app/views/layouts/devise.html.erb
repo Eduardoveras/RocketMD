@@ -7,45 +7,30 @@
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
 
-  <style>
-    /*Devise flash*/
-    .alert-error {
-      background-color: #f2dede;
-      border-color: #eed3d7;
-      color: #b94a48;
-      text-align: center;
-    }
-    .alert-alert {
-      background-color: #f2dede;
-      border-color: #eed3d7;
-      color: #b94a48;
-      text-align: center;
-    }
-    .alert-notice {
-      background-color: #dff0d8;
-      border-color: #d6e9c6;
-      color: #468847;
-      text-align: left;
-    }
-      footer {
-        display: none;
-        opacity: 0;
-      }
-  </style>
   <%= csrf_meta_tags %>
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
 </head>
+<body>
+<div class="app" id="app">
 
-<body style="background:#F7F7F7;">
+  <div class="center-block w-xxl w-auto-xs p-y-md">
+    <div class="navbar">
+      <div class="pull-center">
+        <div ui-include="'../views/blocks/navbar.brand.html'"></div>
+      </div>
+    </div>
+    <div class="p-a-md box-color r box-shadow-z1 text-color m-a">
 
-<div class="container body">
+      <%= yield %>
+    </div>
 
-  <%= yield %>
+    <div class="p-v-lg text-center">
+      <%= render "devise/shared/links" %>
+    </div>
+  </div>
 
-  <%= render "partials/footer" %>
 </div>
 
 </body>
-
