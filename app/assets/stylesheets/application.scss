@@ -14,18 +14,16 @@
  *= require bootstrap-datepicker3
  */
 
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "assets/animate.css/animate.min.css";
+@import "assets/glyphicons/glyphicons.css";
+@import "assets/font-awesome/css/font-awesome.min.css";
+@import "assets/material-design-icons/material-design-icons.css";
 
-@import "font-awesome";
+@import "assets/bootstrap/dist/css/bootstrap.min.css";
+@import "assets/styles/app.css";
+@import "assets/styles/font.css";
 
-@import "css/animate.min";
-@import "css/custom";
-@import "css/icheck/flat/green";
-@import "css/floatexamples";
-@import "css/normalize";
-@import "css/ion.rangeSlider";
-@import "css/ion.rangeSlider.skinFlat";
+
 @import "pace";
 
 @import "datatables";

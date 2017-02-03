@@ -41,7 +41,7 @@ GEM
     addressable (2.5.0)
       public_suffix (~> 2.0, >= 2.0.2)
     arel (7.1.4)
-    autoprefixer-rails (6.7.0)
+    autoprefixer-rails (6.7.2)
       execjs
     awesome_print (1.7.0)
     bcrypt (3.1.11)
@@ -51,11 +51,11 @@ GEM
       rack (>= 0.9.0)
     binding_of_caller (0.7.2)
       debug_inspector (>= 0.0.1)
+    bootstrap (4.0.0.alpha6)
+      autoprefixer-rails (>= 6.0.3)
+      sass (>= 3.4.19)
     bootstrap-datepicker-rails (1.6.4.1)
       railties (>= 3.0)
-    bootstrap-sass (3.3.7)
-      autoprefixer-rails (>= 5.2.1)
-      sass (>= 3.3.4)
     builder (3.2.3)
     byebug (9.0.6)
     coderay (1.1.1)
@@ -195,8 +195,8 @@ DEPENDENCIES
   awesome_print
   better_errors
   binding_of_caller
+  bootstrap (~> 4.0.0.alpha6)
   bootstrap-datepicker-rails
-  bootstrap-sass (~> 3.3.6)
   byebug
   coffee-rails (~> 4.1.0)
   devise (= 4.2.0)
