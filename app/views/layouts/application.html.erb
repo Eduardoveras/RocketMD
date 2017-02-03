@@ -11,23 +11,26 @@
 
 </head>
 
-<body class="nav-md">
-<div class="container body">
+<body >
 
+<div class="app" id="app">
 <%= render "partials/sidenav" %>
-<%= render "partials/topnav" %>
 
-  <!-- page content -->
-  <div class="right_col" role="main">
 
-      <div class="clearfix"></div>
-          <%= yield %>
+  <div id="content" class="app-content box-shadow-z0" role="main">
+    <%= render "partials/topnav" %>
+    <%= render "partials/footer" %>
+    <div ui-view class="app-body" id="view">
+    <div style="min-height: 200px">
+      <%= yield %>
+    </div>
+    </div>
+
   </div>
-
-
-
-  <%= render "partials/footer" %>
-  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
 </div>
+
+
+
+  <%= javascript_include_tag 'footermanifest', 'data-turbolinks-track' => true %>
 </body>
 </html>
