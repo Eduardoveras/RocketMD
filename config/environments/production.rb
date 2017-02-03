@@ -24,6 +24,10 @@ Rails.application.configure do
   # Apache or NGINX already handles this.
   #config.public_file_server.enabled = true = ENV['RAILS_SERVE_STATIC_FILES'].present?
   config.serve_static_files = true
+  config.assets.precompile =  ['*.js', '*.css', '*.css.erb']
+  Rails.application.config.assets.precompile += %w( *.js ^[^_]*.css *.css.erb )
+
+
 
   # change this to true to load images from the public folder in production for non-NGNIX setup, like PUMA
   config.public_file_server.enabled = true
@@ -32,7 +36,7 @@ Rails.application.configure do
   config.assets.js_compressor = :uglifier
   # config.assets.css_compressor = :sass
 
-  config.assets.compile = false
+  config.assets.compile = true
 
 
   # Asset digests allow you to set far-future HTTP expiration dates on all assets,
