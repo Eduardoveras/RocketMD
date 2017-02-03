@@ -23,6 +23,8 @@ Rails.application.configure do
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
   #config.public_file_server.enabled = true = ENV['RAILS_SERVE_STATIC_FILES'].present?
+  config.serve_static_files = true
+
   # change this to true to load images from the public folder in production for non-NGNIX setup, like PUMA
   config.public_file_server.enabled = true
 
