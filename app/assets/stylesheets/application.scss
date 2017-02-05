@@ -23,5 +23,9 @@
 @import "assets/styles/font.css";
 
 @import "pace";
-
+@import "pnotify/pnotify";
+@import "pnotify/pnotify.buttons";
+@import "pnotify/pnotify.material";
+@import "pnotify/pnotify.mobile";
+@import "pnotify/pnotify.brighttheme";
 @import "datatables";
