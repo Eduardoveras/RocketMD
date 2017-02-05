@@ -1,0 +1,1555 @@
+/*
+ * This is a manifest file that'll be compiled into application, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ */
+/*!
+ * Datepicker for Bootstrap v1.6.4 (https://github.com/eternicode/bootstrap-datepicker)
+ *
+ * Copyright 2012 Stefan Petre
+ * Improvements by Andrew Rowls
+ * Licensed under the Apache License v2.0 (http://www.apache.org/licenses/LICENSE-2.0)
+ */
+@import url(assets/animate.css/animate.min.css);
+@import url(assets/glyphicons/glyphicons.css);
+@import url(assets/font-awesome/css/font-awesome.min.css);
+@import url(assets/material-design-icons/material-design-icons.css);
+@import url(assets/bootstrap/dist/css/bootstrap.min.css);
+@import url(assets/styles/app.css);
+@import url(assets/styles/font.css);
+@import url(https://fonts.googleapis.com/css?family=Material+Icons);
+/* line 8, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker {
+  border-radius: 4px;
+  direction: ltr;
+}
+
+/* line 12, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-inline {
+  width: 220px;
+}
+
+/* line 15, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker.datepicker-rtl {
+  direction: rtl;
+}
+
+/* line 18, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker.datepicker-rtl table tr td span {
+  float: right;
+}
+
+/* line 21, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown {
+  top: 0;
+  left: 0;
+  padding: 4px;
+}
+
+/* line 26, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown:before {
+  content: '';
+  display: inline-block;
+  border-left: 7px solid transparent;
+  border-right: 7px solid transparent;
+  border-bottom: 7px solid rgba(0, 0, 0, 0.15);
+  border-top: 0;
+  border-bottom-color: rgba(0, 0, 0, 0.2);
+  position: absolute;
+}
+
+/* line 36, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown:after {
+  content: '';
+  display: inline-block;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-bottom: 6px solid #fff;
+  border-top: 0;
+  position: absolute;
+}
+
+/* line 45, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-left:before {
+  left: 6px;
+}
+
+/* line 48, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-left:after {
+  left: 7px;
+}
+
+/* line 51, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-right:before {
+  right: 6px;
+}
+
+/* line 54, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-right:after {
+  right: 7px;
+}
+
+/* line 57, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-bottom:before {
+  top: -7px;
+}
+
+/* line 60, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-bottom:after {
+  top: -6px;
+}
+
+/* line 63, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-top:before {
+  bottom: -7px;
+  border-bottom: 0;
+  border-top: 7px solid rgba(0, 0, 0, 0.15);
+}
+
+/* line 68, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker-dropdown.datepicker-orient-top:after {
+  bottom: -6px;
+  border-bottom: 0;
+  border-top: 6px solid #fff;
+}
+
+/* line 73, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table {
+  margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* line 82, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td,
+.datepicker table tr th {
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 4px;
+  border: none;
+}
+
+/* line 90, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.table-striped .datepicker table tr td,
+.table-striped .datepicker table tr th {
+  background-color: transparent;
+}
+
+/* line 94, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.old,
+.datepicker table tr td.new {
+  color: #777777;
+}
+
+/* line 98, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.day:hover,
+.datepicker table tr td.focused {
+  background: #eeeeee;
+  cursor: pointer;
+}
+
+/* line 103, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.disabled,
+.datepicker table tr td.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: default;
+}
+
+/* line 109, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted {
+  color: #000;
+  background-color: #d9edf7;
+  border-color: #85c5e5;
+  border-radius: 0;
+}
+
+/* line 115, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.focus {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #298fc2;
+}
+
+/* line 121, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted:hover {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #52addb;
+}
+
+/* line 126, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted:active,
+.datepicker table tr td.highlighted.active {
+  color: #000;
+  background-color: #afd9ee;
+  border-color: #52addb;
+}
+
+/* line 132, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted:active:hover,
+.datepicker table tr td.highlighted.active:hover,
+.datepicker table tr td.highlighted:active:focus,
+.datepicker table tr td.highlighted.active:focus,
+.datepicker table tr td.highlighted:active.focus,
+.datepicker table tr td.highlighted.active.focus {
+  color: #000;
+  background-color: #91cbe8;
+  border-color: #298fc2;
+}
+
+/* line 142, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted.disabled:hover,
+.datepicker table tr td.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.highlighted:hover,
+.datepicker table tr td.highlighted.disabled:focus,
+.datepicker table tr td.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.highlighted:focus,
+.datepicker table tr td.highlighted.disabled.focus,
+.datepicker table tr td.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.highlighted.focus {
+  background-color: #d9edf7;
+  border-color: #85c5e5;
+}
+
+/* line 154, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted.focused {
+  background: #afd9ee;
+}
+
+/* line 157, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.highlighted.disabled,
+.datepicker table tr td.highlighted.disabled:active {
+  background: #d9edf7;
+  color: #777777;
+}
+
+/* line 162, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today {
+  color: #000;
+  background-color: #ffdb99;
+  border-color: #ffb733;
+}
+
+/* line 167, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today:focus,
+.datepicker table tr td.today.focus {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #b37400;
+}
+
+/* line 173, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today:hover {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #f59e00;
+}
+
+/* line 178, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today:active,
+.datepicker table tr td.today.active {
+  color: #000;
+  background-color: #ffc966;
+  border-color: #f59e00;
+}
+
+/* line 184, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today:active:hover,
+.datepicker table tr td.today.active:hover,
+.datepicker table tr td.today:active:focus,
+.datepicker table tr td.today.active:focus,
+.datepicker table tr td.today:active.focus,
+.datepicker table tr td.today.active.focus {
+  color: #000;
+  background-color: #ffbc42;
+  border-color: #b37400;
+}
+
+/* line 194, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today.disabled:hover,
+.datepicker table tr td.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.today:hover,
+.datepicker table tr td.today.disabled:focus,
+.datepicker table tr td.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.today:focus,
+.datepicker table tr td.today.disabled.focus,
+.datepicker table tr td.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.today.focus {
+  background-color: #ffdb99;
+  border-color: #ffb733;
+}
+
+/* line 206, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today.focused {
+  background: #ffc966;
+}
+
+/* line 209, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.today.disabled,
+.datepicker table tr td.today.disabled:active {
+  background: #ffdb99;
+  color: #777777;
+}
+
+/* line 214, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range {
+  color: #000;
+  background-color: #eeeeee;
+  border-color: #bbbbbb;
+  border-radius: 0;
+}
+
+/* line 220, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range:focus,
+.datepicker table tr td.range.focus {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #7c7c7c;
+}
+
+/* line 226, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range:hover {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d;
+}
+
+/* line 231, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range:active,
+.datepicker table tr td.range.active {
+  color: #000;
+  background-color: #d5d5d5;
+  border-color: #9d9d9d;
+}
+
+/* line 237, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range:active:hover,
+.datepicker table tr td.range.active:hover,
+.datepicker table tr td.range:active:focus,
+.datepicker table tr td.range.active:focus,
+.datepicker table tr td.range:active.focus,
+.datepicker table tr td.range.active.focus {
+  color: #000;
+  background-color: #c3c3c3;
+  border-color: #7c7c7c;
+}
+
+/* line 247, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.disabled:hover,
+.datepicker table tr td.range[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range:hover,
+.datepicker table tr td.range.disabled:focus,
+.datepicker table tr td.range[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range:focus,
+.datepicker table tr td.range.disabled.focus,
+.datepicker table tr td.range[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.focus {
+  background-color: #eeeeee;
+  border-color: #bbbbbb;
+}
+
+/* line 259, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.focused {
+  background: #d5d5d5;
+}
+
+/* line 262, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.disabled,
+.datepicker table tr td.range.disabled:active {
+  background: #eeeeee;
+  color: #777777;
+}
+
+/* line 267, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted {
+  color: #000;
+  background-color: #e4eef3;
+  border-color: #9dc1d3;
+}
+
+/* line 272, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.focus {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #4b88a6;
+}
+
+/* line 278, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted:hover {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0;
+}
+
+/* line 283, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted:active,
+.datepicker table tr td.range.highlighted.active {
+  color: #000;
+  background-color: #c1d7e3;
+  border-color: #73a6c0;
+}
+
+/* line 289, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted:active:hover,
+.datepicker table tr td.range.highlighted.active:hover,
+.datepicker table tr td.range.highlighted:active:focus,
+.datepicker table tr td.range.highlighted.active:focus,
+.datepicker table tr td.range.highlighted:active.focus,
+.datepicker table tr td.range.highlighted.active.focus {
+  color: #000;
+  background-color: #a8c8d8;
+  border-color: #4b88a6;
+}
+
+/* line 299, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted.disabled:hover,
+.datepicker table tr td.range.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.highlighted:hover,
+.datepicker table tr td.range.highlighted.disabled:focus,
+.datepicker table tr td.range.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted:focus,
+.datepicker table tr td.range.highlighted.disabled.focus,
+.datepicker table tr td.range.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.highlighted.focus {
+  background-color: #e4eef3;
+  border-color: #9dc1d3;
+}
+
+/* line 311, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted.focused {
+  background: #c1d7e3;
+}
+
+/* line 314, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.highlighted.disabled,
+.datepicker table tr td.range.highlighted.disabled:active {
+  background: #e4eef3;
+  color: #777777;
+}
+
+/* line 319, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today {
+  color: #000;
+  background-color: #f7ca77;
+  border-color: #f1a417;
+}
+
+/* line 324, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.focus {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #815608;
+}
+
+/* line 330, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today:hover {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #bf800c;
+}
+
+/* line 335, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today:active,
+.datepicker table tr td.range.today.active {
+  color: #000;
+  background-color: #f4b747;
+  border-color: #bf800c;
+}
+
+/* line 341, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today:active:hover,
+.datepicker table tr td.range.today.active:hover,
+.datepicker table tr td.range.today:active:focus,
+.datepicker table tr td.range.today.active:focus,
+.datepicker table tr td.range.today:active.focus,
+.datepicker table tr td.range.today.active.focus {
+  color: #000;
+  background-color: #f2aa25;
+  border-color: #815608;
+}
+
+/* line 351, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today.disabled:hover,
+.datepicker table tr td.range.today[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.range.today:hover,
+.datepicker table tr td.range.today.disabled:focus,
+.datepicker table tr td.range.today[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.range.today:focus,
+.datepicker table tr td.range.today.disabled.focus,
+.datepicker table tr td.range.today[disabled].focus,
+fieldset[disabled] .datepicker table tr td.range.today.focus {
+  background-color: #f7ca77;
+  border-color: #f1a417;
+}
+
+/* line 363, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.range.today.disabled,
+.datepicker table tr td.range.today.disabled:active {
+  background: #f7ca77;
+  color: #777777;
+}
+
+/* line 368, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected,
+.datepicker table tr td.selected.highlighted {
+  color: #fff;
+  background-color: #777777;
+  border-color: #555555;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 375, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected:focus,
+.datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.focus,
+.datepicker table tr td.selected.highlighted.focus {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #161616;
+}
+
+/* line 383, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected:hover,
+.datepicker table tr td.selected.highlighted:hover {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #373737;
+}
+
+/* line 389, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected:active,
+.datepicker table tr td.selected.highlighted:active,
+.datepicker table tr td.selected.active,
+.datepicker table tr td.selected.highlighted.active {
+  color: #fff;
+  background-color: #5e5e5e;
+  border-color: #373737;
+}
+
+/* line 397, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected:active:hover,
+.datepicker table tr td.selected.highlighted:active:hover,
+.datepicker table tr td.selected.active:hover,
+.datepicker table tr td.selected.highlighted.active:hover,
+.datepicker table tr td.selected:active:focus,
+.datepicker table tr td.selected.highlighted:active:focus,
+.datepicker table tr td.selected.active:focus,
+.datepicker table tr td.selected.highlighted.active:focus,
+.datepicker table tr td.selected:active.focus,
+.datepicker table tr td.selected.highlighted:active.focus,
+.datepicker table tr td.selected.active.focus,
+.datepicker table tr td.selected.highlighted.active.focus {
+  color: #fff;
+  background-color: #4c4c4c;
+  border-color: #161616;
+}
+
+/* line 413, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.selected.disabled:hover,
+.datepicker table tr td.selected.highlighted.disabled:hover,
+.datepicker table tr td.selected[disabled]:hover,
+.datepicker table tr td.selected.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.selected:hover,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:hover,
+.datepicker table tr td.selected.disabled:focus,
+.datepicker table tr td.selected.highlighted.disabled:focus,
+.datepicker table tr td.selected[disabled]:focus,
+.datepicker table tr td.selected.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.selected:focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted:focus,
+.datepicker table tr td.selected.disabled.focus,
+.datepicker table tr td.selected.highlighted.disabled.focus,
+.datepicker table tr td.selected[disabled].focus,
+.datepicker table tr td.selected.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.selected.focus,
+fieldset[disabled] .datepicker table tr td.selected.highlighted.focus {
+  background-color: #777777;
+  border-color: #555555;
+}
+
+/* line 434, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active,
+.datepicker table tr td.active.highlighted {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 441, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active:focus,
+.datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.focus,
+.datepicker table tr td.active.highlighted.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+
+/* line 449, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active:hover,
+.datepicker table tr td.active.highlighted:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* line 455, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active:active,
+.datepicker table tr td.active.highlighted:active,
+.datepicker table tr td.active.active,
+.datepicker table tr td.active.highlighted.active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* line 463, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active:active:hover,
+.datepicker table tr td.active.highlighted:active:hover,
+.datepicker table tr td.active.active:hover,
+.datepicker table tr td.active.highlighted.active:hover,
+.datepicker table tr td.active:active:focus,
+.datepicker table tr td.active.highlighted:active:focus,
+.datepicker table tr td.active.active:focus,
+.datepicker table tr td.active.highlighted.active:focus,
+.datepicker table tr td.active:active.focus,
+.datepicker table tr td.active.highlighted:active.focus,
+.datepicker table tr td.active.active.focus,
+.datepicker table tr td.active.highlighted.active.focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+
+/* line 479, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td.active.disabled:hover,
+.datepicker table tr td.active.highlighted.disabled:hover,
+.datepicker table tr td.active[disabled]:hover,
+.datepicker table tr td.active.highlighted[disabled]:hover,
+fieldset[disabled] .datepicker table tr td.active:hover,
+fieldset[disabled] .datepicker table tr td.active.highlighted:hover,
+.datepicker table tr td.active.disabled:focus,
+.datepicker table tr td.active.highlighted.disabled:focus,
+.datepicker table tr td.active[disabled]:focus,
+.datepicker table tr td.active.highlighted[disabled]:focus,
+fieldset[disabled] .datepicker table tr td.active:focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted:focus,
+.datepicker table tr td.active.disabled.focus,
+.datepicker table tr td.active.highlighted.disabled.focus,
+.datepicker table tr td.active[disabled].focus,
+.datepicker table tr td.active.highlighted[disabled].focus,
+fieldset[disabled] .datepicker table tr td.active.focus,
+fieldset[disabled] .datepicker table tr td.active.highlighted.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+/* line 500, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span {
+  display: block;
+  width: 23%;
+  height: 54px;
+  line-height: 54px;
+  float: left;
+  margin: 1%;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+/* line 510, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span:hover,
+.datepicker table tr td span.focused {
+  background: #eeeeee;
+}
+
+/* line 514, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.disabled,
+.datepicker table tr td span.disabled:hover {
+  background: none;
+  color: #777777;
+  cursor: default;
+}
+
+/* line 520, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active,
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active.disabled,
+.datepicker table tr td span.active.disabled:hover {
+  color: #fff;
+  background-color: #337ab7;
+  border-color: #2e6da4;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+}
+
+/* line 529, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active:focus,
+.datepicker table tr td span.active:hover:focus,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.focus,
+.datepicker table tr td span.active:hover.focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.focus {
+  color: #fff;
+  background-color: #286090;
+  border-color: #122b40;
+}
+
+/* line 541, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active:hover,
+.datepicker table tr td span.active:hover:hover,
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active.disabled:hover:hover {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* line 549, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active:active,
+.datepicker table tr td span.active:hover:active,
+.datepicker table tr td span.active.disabled:active,
+.datepicker table tr td span.active.disabled:hover:active,
+.datepicker table tr td span.active.active,
+.datepicker table tr td span.active:hover.active,
+.datepicker table tr td span.active.disabled.active,
+.datepicker table tr td span.active.disabled:hover.active {
+  color: #fff;
+  background-color: #286090;
+  border-color: #204d74;
+}
+
+/* line 561, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active:active:hover,
+.datepicker table tr td span.active:hover:active:hover,
+.datepicker table tr td span.active.disabled:active:hover,
+.datepicker table tr td span.active.disabled:hover:active:hover,
+.datepicker table tr td span.active.active:hover,
+.datepicker table tr td span.active:hover.active:hover,
+.datepicker table tr td span.active.disabled.active:hover,
+.datepicker table tr td span.active.disabled:hover.active:hover,
+.datepicker table tr td span.active:active:focus,
+.datepicker table tr td span.active:hover:active:focus,
+.datepicker table tr td span.active.disabled:active:focus,
+.datepicker table tr td span.active.disabled:hover:active:focus,
+.datepicker table tr td span.active.active:focus,
+.datepicker table tr td span.active:hover.active:focus,
+.datepicker table tr td span.active.disabled.active:focus,
+.datepicker table tr td span.active.disabled:hover.active:focus,
+.datepicker table tr td span.active:active.focus,
+.datepicker table tr td span.active:hover:active.focus,
+.datepicker table tr td span.active.disabled:active.focus,
+.datepicker table tr td span.active.disabled:hover:active.focus,
+.datepicker table tr td span.active.active.focus,
+.datepicker table tr td span.active:hover.active.focus,
+.datepicker table tr td span.active.disabled.active.focus,
+.datepicker table tr td span.active.disabled:hover.active.focus {
+  color: #fff;
+  background-color: #204d74;
+  border-color: #122b40;
+}
+
+/* line 589, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.active.disabled:hover,
+.datepicker table tr td span.active:hover.disabled:hover,
+.datepicker table tr td span.active.disabled.disabled:hover,
+.datepicker table tr td span.active.disabled:hover.disabled:hover,
+.datepicker table tr td span.active[disabled]:hover,
+.datepicker table tr td span.active:hover[disabled]:hover,
+.datepicker table tr td span.active.disabled[disabled]:hover,
+.datepicker table tr td span.active.disabled:hover[disabled]:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover,
+fieldset[disabled] .datepicker table tr td span.active:hover:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:hover,
+.datepicker table tr td span.active.disabled:focus,
+.datepicker table tr td span.active:hover.disabled:focus,
+.datepicker table tr td span.active.disabled.disabled:focus,
+.datepicker table tr td span.active.disabled:hover.disabled:focus,
+.datepicker table tr td span.active[disabled]:focus,
+.datepicker table tr td span.active:hover[disabled]:focus,
+.datepicker table tr td span.active.disabled[disabled]:focus,
+.datepicker table tr td span.active.disabled:hover[disabled]:focus,
+fieldset[disabled] .datepicker table tr td span.active:focus,
+fieldset[disabled] .datepicker table tr td span.active:hover:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover:focus,
+.datepicker table tr td span.active.disabled.focus,
+.datepicker table tr td span.active:hover.disabled.focus,
+.datepicker table tr td span.active.disabled.disabled.focus,
+.datepicker table tr td span.active.disabled:hover.disabled.focus,
+.datepicker table tr td span.active[disabled].focus,
+.datepicker table tr td span.active:hover[disabled].focus,
+.datepicker table tr td span.active.disabled[disabled].focus,
+.datepicker table tr td span.active.disabled:hover[disabled].focus,
+fieldset[disabled] .datepicker table tr td span.active.focus,
+fieldset[disabled] .datepicker table tr td span.active:hover.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled.focus,
+fieldset[disabled] .datepicker table tr td span.active.disabled:hover.focus {
+  background-color: #337ab7;
+  border-color: #2e6da4;
+}
+
+/* line 628, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker table tr td span.old,
+.datepicker table tr td span.new {
+  color: #777777;
+}
+
+/* line 632, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker .datepicker-switch {
+  width: 145px;
+}
+
+/* line 635, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker .datepicker-switch,
+.datepicker .prev,
+.datepicker .next,
+.datepicker tfoot tr th {
+  cursor: pointer;
+}
+
+/* line 641, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker .datepicker-switch:hover,
+.datepicker .prev:hover,
+.datepicker .next:hover,
+.datepicker tfoot tr th:hover {
+  background: #eeeeee;
+}
+
+/* line 647, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.datepicker .cw {
+  font-size: 10px;
+  width: 12px;
+  padding: 0 2px 0 5px;
+  vertical-align: middle;
+}
+
+/* line 653, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-group.date .input-group-addon {
+  cursor: pointer;
+}
+
+/* line 656, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-daterange {
+  width: 100%;
+}
+
+/* line 659, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-daterange input {
+  text-align: center;
+}
+
+/* line 662, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-daterange input:first-child {
+  border-radius: 3px 0 0 3px;
+}
+
+/* line 665, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-daterange input:last-child {
+  border-radius: 0 3px 3px 0;
+}
+
+/* line 668, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/bootstrap-datepicker-rails-1.6.4.1/vendor/assets/stylesheets/bootstrap-datepicker3.css */
+.input-daterange .input-group-addon {
+  width: auto;
+  min-width: 16px;
+  padding: 4px 5px;
+  line-height: 1.42857143;
+  text-shadow: 0 1px 0 #fff;
+  border-width: 1px 0;
+  margin-left: -5px;
+  margin-right: -5px;
+}
+
+/* line 1, /home/eduardo/RocketMD/app/assets/stylesheets/pace.css */
+.pace {
+  -webkit-pointer-events: none;
+  pointer-events: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+      user-select: none;
+}
+
+/* line 9, /home/eduardo/RocketMD/app/assets/stylesheets/pace.css */
+.pace-inactive {
+  display: none;
+}
+
+/* line 13, /home/eduardo/RocketMD/app/assets/stylesheets/pace.css */
+.pace .pace-progress {
+  background: #29d;
+  position: fixed;
+  z-index: 2000;
+  top: 0;
+  right: 100%;
+  width: 100%;
+  height: 2px;
+}
+
+/* line 23, /home/eduardo/RocketMD/app/assets/stylesheets/pace.css */
+.pace .pace-progress-inner {
+  display: block;
+  position: absolute;
+  right: 0px;
+  width: 100px;
+  height: 100%;
+  box-shadow: 0 0 10px #29d, 0 0 5px #29d;
+  opacity: 1.0;
+  -webkit-transform: rotate(3deg) translate(0px, -4px);
+  transform: rotate(3deg) translate(0px, -4px);
+}
+
+/* line 38, /home/eduardo/RocketMD/app/assets/stylesheets/pace.css */
+.pace .pace-activity {
+  display: block;
+  position: fixed;
+  z-index: 2000;
+  top: 15px;
+  right: 15px;
+  width: 14px;
+  height: 14px;
+  border: solid 2px transparent;
+  border-top-color: #29d;
+  border-left-color: #29d;
+  border-radius: 10px;
+  -webkit-animation: pace-spinner 400ms linear infinite;
+  animation: pace-spinner 400ms linear infinite;
+}
+
+@-webkit-keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+@keyframes pace-spinner {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+    transform: rotate(360deg);
+  }
+}
+/*
+Author  : Hunter Perrin
+Version : 3.0.0
+Link    : http://sciactive.com/pnotify/
+*/
+/* -- Notice */
+/* line 7, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify {
+  top: 36px;
+  right: 36px;
+  position: absolute;
+  height: auto;
+  z-index: 2;
+}
+
+/* line 14, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+body > .ui-pnotify {
+  /* Notices in the body context should be fixed to the viewport. */
+  position: fixed;
+  /* Ensures notices are above everything */
+  z-index: 100040;
+}
+
+/* line 20, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-modal-overlay {
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: 1;
+}
+
+/* line 29, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+body > .ui-pnotify-modal-overlay {
+  position: fixed;
+  z-index: 100039;
+}
+
+/* line 33, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-in {
+  display: block !important;
+}
+
+/* line 36, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-move {
+  -webkit-transition: left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+  transition: left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+
+/* line 39, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-slow {
+  -webkit-transition: opacity .6s linear;
+  transition: opacity .6s linear;
+  opacity: 0;
+}
+
+/* line 43, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-slow.ui-pnotify.ui-pnotify-move {
+  -webkit-transition: opacity .6s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+  transition: opacity .6s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+
+/* line 46, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-normal {
+  -webkit-transition: opacity .4s linear;
+  transition: opacity .4s linear;
+  opacity: 0;
+}
+
+/* line 50, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-normal.ui-pnotify.ui-pnotify-move {
+  -webkit-transition: opacity .4s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+  transition: opacity .4s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+
+/* line 53, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-fast {
+  -webkit-transition: opacity .2s linear;
+  transition: opacity .2s linear;
+  opacity: 0;
+}
+
+/* line 57, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-fast.ui-pnotify.ui-pnotify-move {
+  -webkit-transition: opacity .2s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+  transition: opacity .2s linear, left .5s ease, top .5s ease, right .5s ease, bottom .5s ease;
+}
+
+/* line 60, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.ui-pnotify-fade-in {
+  opacity: 1;
+}
+
+/* line 63, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify .ui-pnotify-shadow {
+  box-shadow: 0px 6px 28px 0px rgba(0, 0, 0, 0.1);
+}
+
+/* line 68, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-container {
+  background-position: 0 0;
+  padding: .8em;
+  height: 100%;
+  margin: 0;
+}
+
+/* line 74, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-container:after {
+  content: " ";
+  /* Older browser do not support empty content */
+  visibility: hidden;
+  display: block;
+  height: 0;
+  clear: both;
+}
+
+/* line 81, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-container.ui-pnotify-sharp {
+  border-radius: 0;
+}
+
+/* line 86, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-title {
+  display: block;
+  margin-bottom: .4em;
+  margin-top: 0;
+}
+
+/* line 91, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-text {
+  display: block;
+}
+
+/* line 94, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify-icon, .ui-pnotify-icon span {
+  display: block;
+  float: left;
+  margin-right: .2em;
+}
+
+/* Alternate stack initial positioning. */
+/* line 100, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.stack-topleft, .ui-pnotify.stack-bottomleft {
+  left: 25px;
+  right: auto;
+}
+
+/* line 104, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.stack-bottomright, .ui-pnotify.stack-bottomleft {
+  bottom: 25px;
+  top: auto;
+}
+
+/* line 108, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.css */
+.ui-pnotify.stack-modal {
+  left: 50%;
+  right: auto;
+  margin-left: -150px;
+}
+
+/* line 1, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.buttons.css */
+.ui-pnotify-closer, .ui-pnotify-sticker {
+  float: right;
+  margin-left: .2em;
+}
+
+/*
+Color Scheme: https://www.google.com/design/spec/style/color.html#color-color-palette
+*/
+/*
+material: {
+    // Material doesn't require any UI libraries.
+    container: "pnotify-material",
+    notice: "pnotify-material-notice",
+    notice_icon: "material-icons pnotify-material-icon-notice",
+    info: "pnotify-material-info",
+    info_icon: "material-icons pnotify-material-icon-info",
+    success: "pnotify-material-success",
+    success_icon: "material-icons pnotify-material-icon-success",
+    error: "pnotify-material-error",
+    error_icon: "material-icons pnotify-material-icon-error"
+},
+$.extend(PNotify.styling.material, {
+    closer: "pnotify-material-icon-closer",
+    pin_up: "pnotify-material-icon-sticker",
+    pin_down: "pnotify-material-icon-sticker pnotify-material-icon-stuck"
+});
+*/
+/* line 24, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material {
+  border-radius: 0;
+  font-size: 14px;
+}
+
+/* line 30, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material.ui-pnotify-shadow {
+  box-shadow: 0px 6px 24px 0px rgba(0, 0, 0, 0.2);
+}
+
+/* line 35, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material.ui-pnotify-container {
+  padding: 24px;
+}
+
+/* line 38, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material .ui-pnotify-title {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+/* line 42, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-notice {
+  background-color: #FFEB3B;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 47, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-info {
+  background-color: #2196F3;
+  border: none;
+  color: #fff;
+}
+
+/* line 52, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-success {
+  background-color: #8BC34A;
+  border: none;
+  color: rgba(0, 0, 0, 0.87);
+}
+
+/* line 58, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-error {
+  background-color: #F44336;
+  border: none;
+  color: #fff;
+}
+
+/* line 63, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-notice,
+.pnotify-material-icon-info,
+.pnotify-material-icon-success,
+.pnotify-material-icon-closer,
+.pnotify-material-icon-sticker {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  font-family: "Courier New",Courier,monospace;
+  border-radius: 50%;
+}
+
+/* line 77, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-notice:after,
+.pnotify-material-icon-info:after,
+.pnotify-material-icon-success:after,
+.pnotify-material-icon-closer:after,
+.pnotify-material-icon-sticker:after {
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+/* line 86, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-notice:after {
+  content: "announcement";
+}
+
+/* line 89, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-info:after {
+  content: "info";
+}
+
+/* line 92, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-success:after {
+  content: "check circle";
+}
+
+/* line 95, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-error:after {
+  content: "report problem";
+}
+
+/* line 98, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-closer,
+.pnotify-material-icon-sticker {
+  display: inline-block;
+}
+
+/* line 102, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-closer:after {
+  top: -4px;
+  content: "\002715";
+}
+
+/* line 106, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-sticker:after {
+  top: -5px;
+  content: "\01D1BC";
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/* line 115, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.material.css */
+.pnotify-material-icon-sticker.pnotify-material-icon-stuck:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 1, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+.ui-pnotify-container {
+  position: relative;
+  left: 0;
+}
+
+@media (max-width: 480px) {
+  /* -- Notice */
+  /* line 7, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able.ui-pnotify {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: auto !important;
+    font-size: 1.2em;
+    -webkit-font-smoothing: antialiased;
+    -moz-font-smoothing: antialiased;
+    -ms-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+  }
+
+  /* line 19, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able.ui-pnotify .ui-pnotify-shadow {
+    box-shadow: none;
+    border-bottom-width: 5px;
+  }
+
+  /* line 25, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able .ui-pnotify-container {
+    border-radius: 0;
+  }
+
+  /* Alternate stack initial positioning. */
+  /* line 31, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able.ui-pnotify.stack-topleft, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft {
+    left: 0;
+    right: 0;
+  }
+
+  /* line 35, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able.ui-pnotify.stack-bottomright, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft {
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: auto;
+  }
+
+  /* line 41, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.mobile.css */
+  .ui-pnotify-mobile-able.ui-pnotify.stack-bottomright .ui-pnotify-shadow, .ui-pnotify-mobile-able.ui-pnotify.stack-bottomleft .ui-pnotify-shadow {
+    border-top-width: 5px;
+    border-bottom-width: 1px;
+  }
+}
+/*
+Color Scheme: http://paletton.com/palette.php?uid=c1T3n2J040kpEKzpEKzbEPSOEyiNk9W
+*/
+/* line 4, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme {
+  border-radius: 0;
+}
+
+/* line 9, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme.ui-pnotify-container {
+  padding: 18px;
+}
+
+/* line 12, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme .ui-pnotify-title {
+  margin-bottom: 12px;
+}
+
+/* line 15, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-notice {
+  background-color: #FFFFA2;
+  border: 0 solid #FFFF00;
+  color: #4F4F00;
+}
+
+/* line 20, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-info {
+  background-color: #8FCEDD;
+  border: 0 solid #0286A5;
+  color: #012831;
+}
+
+/* line 25, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-success {
+  background-color: #AFF29A;
+  border: 0 solid #35DB00;
+  color: #104300;
+}
+
+/* line 30, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-error {
+  background-color: #FFABA2;
+  background-image: -webkit-repeating-linear-gradient(315deg, transparent, transparent 35px, rgba(255, 255, 255, 0.3) 35px, rgba(255, 255, 255, 0.3) 70px);
+  background-image: repeating-linear-gradient(135deg, transparent, transparent 35px, rgba(255, 255, 255, 0.3) 35px, rgba(255, 255, 255, 0.3) 70px);
+  border: 0 solid #FF1800;
+  color: #4F0800;
+}
+
+/* line 36, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-notice,
+.brighttheme-icon-info,
+.brighttheme-icon-success,
+.brighttheme-icon-closer,
+.brighttheme-icon-sticker {
+  position: relative;
+  width: 16px;
+  height: 16px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  font-family: "Courier New",Courier,monospace;
+  border-radius: 50%;
+}
+
+/* line 50, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-notice:after,
+.brighttheme-icon-info:after,
+.brighttheme-icon-success:after,
+.brighttheme-icon-closer:after,
+.brighttheme-icon-sticker:after {
+  position: absolute;
+  top: 0;
+  left: 4px;
+}
+
+/* line 59, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-notice {
+  background-color: #2E2E00;
+  color: #FFFFA2;
+  margin-top: 2px;
+}
+
+/* line 64, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-notice:after {
+  content: "!";
+}
+
+/* line 67, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-info {
+  background-color: #012831;
+  color: #8FCEDD;
+  margin-top: 2px;
+}
+
+/* line 72, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-info:after {
+  content: "i";
+}
+
+/* line 75, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-success {
+  background-color: #104300;
+  color: #AFF29A;
+  margin-top: 2px;
+}
+
+/* line 80, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-success:after {
+  content: "\002713";
+}
+
+/* line 83, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-error {
+  position: relative;
+  width: 0;
+  height: 0;
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-bottom: 16px solid #2E0400;
+  font-size: 0;
+  line-height: 0;
+  color: #FFABA2;
+  margin-top: 1px;
+}
+
+/* line 95, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-error:after {
+  position: absolute;
+  top: 1px;
+  left: -4px;
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+  font-family: "Courier New",Courier,monospace;
+  content: "!";
+}
+
+/* line 105, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-closer,
+.brighttheme-icon-sticker {
+  display: inline-block;
+}
+
+/* line 109, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-closer:after {
+  top: -4px;
+  content: "\002715";
+}
+
+/* line 113, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-sticker:after {
+  top: -5px;
+  content: "\01D1BC";
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+}
+
+/* line 122, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-icon-sticker.brighttheme-icon-stuck:after {
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+
+/* line 130, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme .ui-pnotify-action-bar {
+  padding-top: 12px;
+}
+
+/* line 133, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme .ui-pnotify-action-bar textarea, .brighttheme .ui-pnotify-action-bar input {
+  display: block;
+  width: 100%;
+  margin-bottom: 12px !important;
+}
+
+/* line 138, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme .ui-pnotify-action-button {
+  text-transform: uppercase;
+  font-weight: bold;
+  padding: 4px 8px;
+  border: none;
+  background: transparent;
+}
+
+/* line 146, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme .ui-pnotify-action-button.btn-primary {
+  border: none;
+  border-radius: 0;
+}
+
+/* line 150, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-notice .ui-pnotify-action-button.btn-primary {
+  background-color: #FFFF00;
+  color: #4F4F00;
+}
+
+/* line 154, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-info .ui-pnotify-action-button.btn-primary {
+  background-color: #0286A5;
+  color: #012831;
+}
+
+/* line 158, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-success .ui-pnotify-action-button.btn-primary {
+  background-color: #35DB00;
+  color: #104300;
+}
+
+/* line 162, /home/eduardo/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/pnotify-rails-3.0.0/vendor/assets/stylesheets/pnotify/pnotify.brighttheme.css */
+.brighttheme-error .ui-pnotify-action-button.btn-primary {
+  background-color: #FF1800;
+  color: #4F0800;
+}
+
+/*
+*= require datatables/dataTables.bootstrap
+*
+*optional add '=' enable
+* require datatables/extensions/AutoFill/autoFill.bootstrap
+* require datatables/extensions/Buttons/buttons.bootstrap
+* require datatables/extensions/ColReorder/colReorder.bootstrap
+* require datatables/extensions/FixedColumns/fixedColumns.bootstrap
+* require datatables/extensions/FixedHeader/fixedHeader.bootstrap
+* require datatables/extensions/KeyTable/keyTable.bootstrap
+* require datatables/extensions/Responsive/responsive.bootstrap
+* require datatables/extensions/RowReorder/rowReorder.bootstrap
+* require datatables/extensions/Scroller/scroller.bootstrap
+* require datatables/extensions/Select/select.bootstrap
+*/
