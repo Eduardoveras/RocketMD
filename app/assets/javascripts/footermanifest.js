@@ -1,3 +1,6 @@
+//= require libs/jquery/jquery/dist/jquery.js
+//= require libs/jquery/tether/dist/js/tether.min.js
+//= require libs/jquery/bootstrap/dist/js/bootstrap.js
 
 //= require libs/jquery/underscore/underscore-min.js
 //= require libs/jquery/jQuery-Storage-API/jquery.storageapi.min.js
@@ -16,5 +19,9 @@
 //= require html/scripts/ui-toggle-class.js
 
 //= require html/scripts/app.js
+
+
+//= require libs/jquery/jquery-pjax/jquery.pjax.js
+//= require html/scripts/ajax.js
 
 

@@ -16,7 +16,39 @@
           <i class="material-icons">&#xe7f5;</i>
           <span class="label label-sm up warn">3</span>
         </a>
-        <div ui-include="'../views/blocks/dropdown.notification.html'"></div>
+        <div class="dropdown-menu pull-right w-xl animated fadeInUp no-bg no-border no-shadow">
+          <div class="scrollable" style="max-height: 220px">
+            <ul class="list-group list-group-gap m-a-0">
+              <li class="list-group-item black lt box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a0.jpg" alt="..." class="w-40 img-circle">
+          </span>
+                <span class="clear block">
+            Use awesome <a href class="text-primary">animate.css</a><br>
+            <small class="text-muted">10 minutes ago</small>
+          </span>
+              </li>
+              <li class="list-group-item black lt box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a1.jpg" alt="..." class="w-40 img-circle">
+          </span>
+                <span class="clear block">
+            <a href class="text-primary">Joe</a> Added you as friend<br>
+            <small class="text-muted">2 hours ago</small>
+          </span>
+              </li>
+              <li class="list-group-item dark-white text-color box-shadow-z0 b">
+          <span class="pull-left m-r">
+            <img src="../assets/images/a2.jpg" alt="..." class="w-40 img-circle">
+          </span>
+                <span class="clear block">
+            <a href class="text-primary">Danie</a> sent you a message<br>
+            <small class="text-muted">1 day ago</small>
+          </span>
+              </li>
+            </ul>
+          </div>
+        </div>
       </li>
       <li class="nav-item dropdown">
         <a class="nav-link clear" href data-toggle="dropdown">
@@ -25,7 +57,25 @@
                     <i class="on b-white bottom"></i>
                   </span>
         </a>
-        <div ui-include="'../views/blocks/dropdown.user.html'"></div>
+        <div class="dropdown-menu pull-right dropdown-menu-scale">
+          <a class="dropdown-item" ui-sref="app.inbox.list">
+            <span>Inbox</span>
+            <span class="label warn m-l-xs">3</span>
+          </a>
+          <a class="dropdown-item" ui-sref="app.page.profile">
+            <span>Profile</span>
+          </a>
+          <a class="dropdown-item" ui-sref="app.page.setting">
+            <span>Settings</span>
+            <span class="label primary m-l-xs">3/9</span>
+          </a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" ui-sref="app.docs">
+            Need help?
+          </a>
+          <a class="dropdown-item" ui-sref="access.signin">Sign out</a>
+        </div>
+
       </li>
       <li class="nav-item hidden-md-up">
         <a class="nav-link" data-toggle="collapse" data-target="#collapse">
@@ -37,7 +87,16 @@
 
     <!-- navbar collapse -->
     <div class="collapse navbar-toggleable-sm" id="collapse">
-      <div ui-include="'../views/blocks/navbar.form.right.html'"></div>
+      <!-- search form -->
+      <form class="navbar-form form-inline pull-right pull-none-sm navbar-item v-m" role="search">
+        <div class="form-group l-h m-a-0">
+          <div class="input-group">
+            <input type="text" class="form-control form-control-sm p-x b-a rounded" placeholder="Search projects...">
+          </div>
+        </div>
+      </form>
+      <!-- / search form -->
+
       <!-- link and dropdown -->
       <ul class="nav navbar-nav">
         <li class="nav-item dropdown">
@@ -45,7 +104,21 @@
             <i class="fa fa-fw fa-plus text-muted"></i>
             <span>New</span>
           </a>
-          <div ui-include="'../views/blocks/dropdown.new.html'"></div>
+          <div class="dropdown-menu dropdown-menu-scale">
+            <a class="dropdown-item" ui-sref="app.inbox.compose">
+              <span>Inbox</span>
+            </a>
+            <a class="dropdown-item" ui-sref="app.todo">
+              <span>Todo</span>
+            </a>
+            <a class="dropdown-item" ui-sref="app.note.list">
+              <span>Note</span>
+              <span class="label primary m-l-xs">3</span>
+            </a>
+            <div class="dropdown-divider"></div>
+            <a class="dropdown-item" ui-sref="app.contact">Contact</a>
+          </div>
+
         </li>
       </ul>
       <!-- / -->

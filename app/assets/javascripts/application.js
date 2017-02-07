@@ -10,20 +10,16 @@
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
 //
-//= require jquery
-//= require bootstrap-sprockets
-
-
-//= require jquery
-//= require bootstrap-sprockets
-//= require jquery_ujs
+//#= require jquery
+//#= require bootstrap-sprockets
+//#= require jquery_ujs
 //= require datatables
 //= require turbolinks
 //= require bootstrap-datepicker
 
 //= require pnotify
-//= require unobtrusive_flash
-//= require flash.js
+//#= require unobtrusive_flash
+//#= require flash.js
 
 
 

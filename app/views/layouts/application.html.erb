@@ -1,13 +1,25 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <meta charset="utf-8" />
   <title><%= content_for?(:title) ? yield(:title) : "Rocket MD Software" %> </title>
+
+  <meta name="description" content="RocketMD, Dashboard, Medical, Software " />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimal-ui" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- for ios 7 style, multi-resolution icon of 152x152 -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-barstyle" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="RocketMD">
+  <!-- for Chrome on Android, multi-resolution icon of 196x196 -->
+  <meta name="mobile-web-app-capable" content="yes">
 
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
 
   <%= csrf_meta_tags %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+
 
 </head>
 
@@ -27,6 +39,7 @@
     </div>
 
   </div>
+  <%= render "partials/theme_switcher" %>
 </div>
 
 
