@@ -28,10 +28,15 @@ gem 'bootstrap-datepicker-rails'
 
 
 
-
+#Admin panel gem
+gem 'rails_admin', '~> 1.1.1'
 
 # sendgrrid on heroku
 gem 'sendgrid-ruby'
+
+# Authorization with CanCanCan
+gem 'cancancan'
+
 
 
 # Use jquery as the JavaScript library

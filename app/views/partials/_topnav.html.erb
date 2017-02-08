@@ -73,7 +73,7 @@
           <a class="dropdown-item" ui-sref="app.docs">
             Need help?
           </a>
-          <a class="dropdown-item" ui-sref="access.signin">Sign out</a>
+          <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "dropdown-item") %>
         </div>
 
       </li>

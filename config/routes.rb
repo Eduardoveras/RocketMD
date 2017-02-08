@@ -10,6 +10,7 @@ Rails.application.routes.draw do
 
   devise_scope :user do
     authenticated :user do
+      mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
       root 'plainpage#index', as: :root
     end
 
