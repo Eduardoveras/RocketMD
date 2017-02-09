@@ -10,6 +10,7 @@ class User < ApplicationRecord
 
   accepts_nested_attributes_for :clinic
 
+  has_paper_trail
   #TODO: Implement "accepts_nested_attributes_for:" method, and update registration form
 
 

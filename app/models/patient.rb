@@ -2,6 +2,7 @@ class Patient < ApplicationRecord
   validates_presence_of :first_name, :last_name, :identification, :date_of_birth
   validate :not_future_date
 
+  has_paper_trail
   has_and_belongs_to_many :clinic
 
   def name

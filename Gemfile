@@ -35,7 +35,13 @@ gem 'rails_admin', '~> 1.1.1'
 gem 'sendgrid-ruby'
 
 # Authorization with CanCanCan
-gem 'cancancan'
+gem 'cancancan' #TODO: Implement this!!! or change with pundit
+
+
+# Versioning for the models and the change history on the backend
+gem 'paper_trail'
+
+
 
 
 
