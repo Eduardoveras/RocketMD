@@ -1,16 +1,17 @@
-<h2>Resend confirmation instructions</h2>
+<div class="m-b">
+  Resend confirmation instructions
+  <p class="text-xs m-t">Enter your email address below and we will send you instructions on how activate your
+    account.</p>
+</div>
 
-<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+<%= form_for(resource, as: resource_name, url: confirmation_path(resource_name), html: {method: :post}) do |f| %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email) %>
-  </div>
+    <div class="md-form-group">
+      <%= f.label :email %><br/>
+      <%= f.email_field :email, autofocus: true, value: (resource.pending_reconfirmation? ? resource.unconfirmed_email : resource.email), class: 'md-input', required: true %>
+    </div>
 
-  <div class="actions">
-    <%= f.submit "Resend confirmation instructions" %>
-  </div>
+    <%= f.submit "Resend confirmation", class: 'btn primary btn-block p-x-md' %>
+
 <% end %>
-
-<%= render "devise/shared/links" %>

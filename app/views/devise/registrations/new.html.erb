@@ -1,57 +1,37 @@
-<%# views/devise/sessions/new.html.erb %>
-
-<div class="">
-
-  <div id="wrapper">
-    <div id="login" class="animate form">
-      <section class="login_content">
-        <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-            <%= devise_error_messages! %>
-            <h1>Create Account</h1>
-
-            <%= f.fields_for(:clinic, Clinic.new) do |clinic_form| %>
-                <div>
-                  <%= clinic_form.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Clinic Name", :required => "" %>
-                </div>
-            <% end %>
-
-            <div>
-              <%= f.text_field :name, autofocus: true, :class => "form-control", :placeholder => "Name", :required => "" %>
-            </div>
-            <div>
-              <%= f.email_field :email, autofocus: true, :class => "form-control", :placeholder => "Email", :required => "" %>
-            </div>
-            <div>
-              <% if @minimum_password_length %>
-                  <em>(<%= @minimum_password_length %> characters minimum)</em>
-              <% end %><br/>
-              <%= f.password_field :password, autofocus: true, :class => "form-control", :placeholder => "Password", :required => "", autocomplete: "off" %>
-            </div>
-            <div>
-              <%= f.password_field :password_confirmation, autofocus: true, :class => "form-control", :placeholder => "Confirm Password", :required => "", autocomplete: "off" %>
-
-            </div>
-            <div>
-              <%= f.submit "Sign up", :class => "btn btn-default submit" %>
-            </div>
-            <div class="clearfix"></div>
-            <div class="separator">
-
-              <%= render "devise/shared/links" %>
-
-              <div class="clearfix"></div>
-              <br/>
-              <div>
-                <h1><i class="fa fa-paw" style="font-size: 26px;"></i> Rocket MD</h1>
-
-                <p>©2017 All Rights Reserved. Rocket MD. Privacy and Terms</p>
-              </div>
-            </div>
-        <% end %>
-        <!-- form -->
-      </section>
-      <!-- content -->
-    </div>
-  </div>
+<div class="m-b text-sm">
+  Sign up to your RocketMD Account
 </div>
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= devise_error_messages! %>
 
+
+  <div class="md-form-group">
+    <%= f.text_field :name, autofocus: true, :class => "md-input", :placeholder => "Name", :required => "" %>
+    <label>Name</label>
+  </div>
+  <div class="md-form-group">
+    <%= f.email_field :email, autofocus: true, :class => "md-input", :placeholder => "Email", :required => "" %>
+    <label>Email</label>
+  </div>
+  <div class="md-form-group">
+    <%= f.password_field :password, autofocus: true, :class => "md-input", :placeholder => "Password", :required => "", autocomplete: "off" %>
+    <label>Password
+      <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br/>
+    </label>
+  </div>
+    <div class="md-form-group">
+      <%= f.password_field :password_confirmation, autofocus: true, :class => "md-input", :placeholder => "Confirm Password", :required => "", autocomplete: "off" %>
+      <label>Password</label>
+    </div>
+
+
+  <div class="m-b-md">
+    <label class="md-check">
+      <input type="checkbox" required><i class="primary"></i> Agree the <a href>terms and policy</a>
+    </label>
+  </div>
+    <%= f.submit "Sign up", :class => "btn primary btn-block p-x-md" %>
+
+<% end %>

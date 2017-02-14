@@ -1,16 +1,19 @@
-<h2>Forgot your password?</h2>
+<div class="m-b">
+  Forgot Password?
+  <p class="text-xs m-t">Enter your email address below and we will send you instructions on how to recover your password.</p>
+</div>
 
 <%= form_for(resource, as: resource_name, url: password_path(resource_name), html: { method: :post }) do |f| %>
-  <%= devise_error_messages! %>
+    <%= devise_error_messages! %>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Send me reset password instructions" %>
-  </div>
+
+    <div class="md-form-group">
+      <%= f.label :email %><br />
+      <%= f.email_field :email, autofocus: true %>
+    </div>
+
+    <%= f.submit "reset password", class: 'btn primary btn-block p-x-md' %>
+
+
 <% end %>
-
-<%= render "devise/shared/links" %>
