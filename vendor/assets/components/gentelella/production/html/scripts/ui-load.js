@@ -1,11 +1,5 @@
 
-/**
- * 0.1.0
- * Deferred load js/css file, used for ui-jq.js and Lazy Loading.
- * 
- * @ flatfull.com All Rights Reserved.
- * Author url: http://themeforest.net/user/flatfull
- */
+
 var uiLoad = uiLoad || {};
 
 (function($, $document, uiLoad) {

@@ -13278,7 +13278,6 @@ var MODULE_CONFIG = {
 });
 
 
-
 var uiLoad = uiLoad || {};
 
 (function($, $document, uiLoad) {
@@ -13533,7 +13532,7 @@ var uiLoad = uiLoad || {};
 	'use strict';
 
 	  window.app = {
-      name: 'Flatkit',
+      name: 'RocketMD',
       version: '1.1.3',
       // for chart colors
       color: {

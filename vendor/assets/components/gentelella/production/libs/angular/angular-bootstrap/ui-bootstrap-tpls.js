@@ -1,9 +1,4 @@
-/*
- * angular-ui-bootstrap for bootstrap 4
- * http://themeforest.net/user/flatfull/portfolio
 
- * License: Flatfull
- */
 
 angular.module('ui.bootstrap.tooltip')
 .directive('uibTooltipClasses', function() {
