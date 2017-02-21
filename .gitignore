@@ -41,6 +41,8 @@ bower.json
 # Ignore Byebug command history file.
 .byebug_history
 
-
 #rubymine stuff
 .idea
+
+.vagrant/
+*.log
