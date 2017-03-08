@@ -28,11 +28,11 @@
       <div class="box p-a">
         <div class="pull-left m-r">
 	            <span class="w-48 rounded  accent">
-	              <i class="material-icons">&#xe151;</i>
+                <i class="fa fa-wheelchair fa-2x"></i>
 	            </span>
         </div>
         <div class="clear">
-          <h4 class="m-a-0 text-lg _300"><a href>125 <span class="text-sm">Emails</span></a></h4>
+          <h4 class="m-a-0 text-lg _300"><a href><%= Patient.count %> <span class="text-sm">Patients</span></a></h4>
           <small class="text-muted">6 new arrivals.</small>
         </div>
       </div>
@@ -45,7 +45,7 @@
 	            </span>
         </div>
         <div class="clear">
-          <h4 class="m-a-0 text-lg _300"><a href>40 <span class="text-sm">Projects</span></a></h4>
+          <h4 class="m-a-0 text-lg _300"><a href><%= Appointment.count %> <span class="text-sm">Appointments</span></a></h4>
           <small class="text-muted">38 open.</small>
         </div>
       </div>
@@ -58,191 +58,8 @@
 	            </span>
         </div>
         <div class="clear">
-          <h4 class="m-a-0 text-lg _300"><a href>600 <span class="text-sm">Users</span></a></h4>
+          <h4 class="m-a-0 text-lg _300"><a href><%= User.count %> <span class="text-sm">Users</span></a></h4>
           <small class="text-muted">632 vips.</small>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-sm-6 col-md-4">
-      <div class="box">
-        <div class="box-header">
-          <h3>Projects monitor</h3>
-          <small>Calculated in last 30 days</small>
-        </div>
-        <div class="box-tool">
-          <ul class="nav">
-            <li class="nav-item inline">
-              <a class="nav-link">
-                <i class="material-icons md-18">&#xe863;</i>
-              </a>
-            </li>
-            <li class="nav-item inline dropdown">
-              <a class="nav-link" data-toggle="dropdown">
-                <i class="material-icons md-18">&#xe5d4;</i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-scale pull-right">
-                <a class="dropdown-item" href>This week</a>
-                <a class="dropdown-item" href>This month</a>
-                <a class="dropdown-item" href>This week</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item">Today</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="box-body">
-          <div class="text-center m-b">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-sm white">
-                <input type="radio" name="options" autocomplete="off"> Month
-              </label>
-              <label class="btn btn-sm white">
-                <input type="radio" name="options" autocomplete="off"> Day
-              </label>
-            </div>
-          </div>
-          <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[1, 3.6], [2, 3.5], [3, 6], [4, 4], [5, 4.3], [6, 3.5], [7, 3.6]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                },
-	                { data: [[1, 3], [2, 2.6], [3, 3.2], [4, 3], [5, 3.5], [6, 3], [7, 3.5]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                },
-	                { data: [[1, 2], [2, 1.6], [3, 2.4], [4, 2.1], [5, 1.7], [6, 1.5], [7, 1.7]],
-	                  points: { show: true, radius: 0},
-                  	  splines: { show: true, tension: 0.45, lineWidth: 2, fill: 1 }
-	                }
-	              ],
-	              {
-	                colors: ['#a88add','#0cc2aa','#fcc100'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px" >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-6 col-md-4">
-      <div class="box">
-        <div class="box-header">
-          <h3>Tasks</h3>
-          <small>Calculated in last 7 days</small>
-        </div>
-        <div class="box-tool">
-          <ul class="nav">
-            <li class="nav-item inline">
-              <a class="nav-link">
-                <i class="material-icons md-18">&#xe863;</i>
-              </a>
-            </li>
-            <li class="nav-item inline dropdown">
-              <a class="nav-link" data-toggle="dropdown">
-                <i class="material-icons md-18">&#xe5d4;</i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-scale pull-right">
-                <a class="dropdown-item" href>This week</a>
-                <a class="dropdown-item" href>This month</a>
-                <a class="dropdown-item" href>This week</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item">Today</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="box-body">
-          <div class="text-center m-b">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-sm rounded white">
-                <input type="radio" name="options" autocomplete="off"> This Month
-              </label>
-              <label class="btn btn-sm rounded white">
-                <input type="radio" name="options" autocomplete="off"> This Week
-              </label>
-            </div>
-          </div>
-          <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[1, 2], [2, 4], [3, 5], [4, 7], [5, 6], [6, 4], [7, 5], [8, 4]] }
-	              ],
-	              {
-	                bars: { show: true, fill: true,  barWidth: 0.25, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
-	                colors: ['#a88add'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px" >
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="col-sm-12 col-md-4">
-      <div class="box">
-        <div class="box-header">
-          <h3>Sales</h3>
-          <small>Calculated in last 7 days</small>
-        </div>
-        <div class="box-tool">
-          <ul class="nav">
-            <li class="nav-item inline">
-              <a class="nav-link">
-                <i class="material-icons md-18">&#xe863;</i>
-              </a>
-            </li>
-            <li class="nav-item inline dropdown">
-              <a class="nav-link" data-toggle="dropdown">
-                <i class="material-icons md-18">&#xe5d4;</i>
-              </a>
-              <div class="dropdown-menu dropdown-menu-scale pull-right">
-                <a class="dropdown-item" href>This week</a>
-                <a class="dropdown-item" href>This month</a>
-                <a class="dropdown-item" href>This week</a>
-                <div class="dropdown-divider"></div>
-                <a class="dropdown-item">Today</a>
-              </div>
-            </li>
-          </ul>
-        </div>
-        <div class="box-body">
-          <div class="text-center m-b">
-            <div class="btn-group" data-toggle="buttons">
-              <label class="btn btn-sm rounded white">
-                <input type="radio" name="options" autocomplete="off"> Market
-              </label>
-              <label class="btn btn-sm rounded white">
-                <input type="radio" name="options" autocomplete="off"> Referral
-              </label>
-            </div>
-          </div>
-          <div ui-jp="plot" ui-refresh="app.setting.color" ui-options="
-	              [
-	                { data: [[3, 1], [2, 2], [6, 3], [5, 4], [7, 5]] }
-	              ],
-	              {
-	                bars: { horizontal: true, show: true, fill: true,  barWidth: 0.3, lineWidth: 1, fillColor: { colors: [{ opacity: 0.8 }, { opacity: 1}] }, align: 'center' },
-	                colors: ['#0cc2aa'],
-	                series: { shadowSize: 3 },
-	                xaxis: { show: true, font: { color: '#ccc' }, position: 'bottom' },
-	                yaxis:{ show: true, font: { color: '#ccc' }},
-	                grid: { hoverable: true, clickable: true, borderWidth: 0, color: 'rgba(120,120,120,0.5)' },
-	                tooltip: true,
-	                tooltipOpts: { content: '%x.0 is %y.4',  defaultTheme: false, shifts: { x: 0, y: -40 } }
-	              }
-	            " style="height:188px" >
-          </div>
         </div>
       </div>
     </div>
@@ -259,7 +76,7 @@
             <a herf class="list-left">
 			          	<span class="w-40 r-2x _600 text-lg accent">
 			            	B
-                    </apan>
+                    </span>
             </a>
             <div class="list-body">
               <div class="m-y-sm pull-right">
@@ -277,7 +94,7 @@
             <a herf class="list-left">
 			          	<span class="w-40 r-2x _600 text-lg success">
 			            	G
-                    </apan>
+                    </span>
             </a>
             <div class="list-body">
               <div class="m-y-sm pull-right">
@@ -295,7 +112,7 @@
             <a herf class="list-left">
 			          	<span class="w-40 r-2x _600 text-lg purple">
 			            	#
-                    </apan>
+                    </span>
             </a>
             <div class="list-body">
               <div class="m-y-sm pull-right">
@@ -313,7 +130,7 @@
             <a herf class="list-left">
 			          	<span class="w-40 r-2x _600 blue">
 			            	<i class="fa fa-lg fa-google"></i>
-                    </apan>
+                    </span>
             </a>
             <div class="list-body">
               <div class="m-y-sm pull-right">
@@ -331,7 +148,7 @@
             <a herf class="list-left">
 			          	<span class="w-40 r-2x _600 blue-800">
 			            	<i class="fa fa-lg fa-facebook"></i>
-                    </apan>
+                    </span>
             </a>
             <div class="list-body">
               <div class="m-y-sm pull-right">

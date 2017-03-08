@@ -58,19 +58,16 @@
                   </span>
         </a>
         <div class="dropdown-menu pull-right dropdown-menu-scale">
-          <a class="dropdown-item" ui-sref="app.inbox.list">
-            <span>Inbox</span>
-            <span class="label warn m-l-xs">3</span>
-          </a>
-          <a class="dropdown-item" ui-sref="app.page.profile">
+
+          <a class="dropdown-item" href="#">
             <span>Profile</span>
           </a>
-          <a class="dropdown-item" ui-sref="app.page.setting">
-            <span>Settings</span>
+          <a class="dropdown-item" href="<%= rails_admin_path %>">
+            <span>Admin Settings</span>
             <span class="label primary m-l-xs">3/9</span>
           </a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" ui-sref="app.docs">
+          <a class="dropdown-item" href="https://github.com/Eduardoveras94/RocketMD">
             Need help?
           </a>
           <%= link_to('Logout', destroy_user_session_path, :method => :delete, class: "dropdown-item") %>
