@@ -1,0 +1,33 @@
+<%= form_for(appointment) do |f| %>
+  <% if appointment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(appointment.errors.count, "error") %> prohibited this appointment from being saved:</h2>
+
+      <ul>
+      <% appointment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <% #TODO: Must find way to show the full name instead of the first name only %>
+    <%= f.label :patient_id %>
+    <%= f.collection_select :patient_id, Patient.order(:first_name ),:id,:first_name, include_blank: true %>
+  </div>
+
+  <div class="field">
+    <%= f.label :datetime %>
+    <%= f.datetime_select :datetime %>
+  </div>
+
+  <div class="field">
+    <%= f.label :description %>
+    <%= f.text_area :description %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :appointments
   resources :patients
   devise_for :users, controllers: { confirmations: 'confirmations' ,registrations: 'registrations'}
   # The priority is based upon order of creation: first created -> highest priority.
