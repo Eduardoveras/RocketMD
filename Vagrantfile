@@ -1,21 +1,76 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
 
-Vagrant.configure("2") do |config|
-  config.vm.box = "base"
-  config.vm.box = "ubuntu/xenial64"
-  config.vm.box_check_update = false
-  config.vm.hostname = "rocketmd"
+VAGRANTFILE_API_VERSION = "2"
+REQUIRED_PLUGINS        = %w(vagrant-vbguest vagrant-librarian-chef-nochef)
 
-  config.vm.provider "virtualbox" do |v|
-    v.name = "Rocket MD"
-    v.memory = 512
-    v.cpus = 1
+plugins_to_install = REQUIRED_PLUGINS.select { |plugin| not Vagrant.has_plugin? plugin }
+if not plugins_to_install.empty?
+  puts "Installing required plugins: #{plugins_to_install.join(' ')}"
+  if system "vagrant plugin install #{plugins_to_install.join(' ')}"
+    exec "vagrant #{ARGV.join(' ')}"
+  else
+    abort "Installation of one or more plugins has failed. Aborting. Please read the Bike Index README."
+  end
+end
+
+Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
+  config.vm.box = "ubuntu/xenial64"
+
+  # Configure the virtual machine to use 1.5GB of RAM
+  config.vm.provider :virtualbox do |vb|
+    vb.customize ["modifyvm", :id, "--memory", "1536"]
   end
 
-  config.vm.network "forwarded_port", guest: 8100, host: 8100
-  # to assign a custom ip in your network
-  config.vm.network "public_network", ip: "10.0.1.92"
+  # Forward the Rails server default port to the host
+  config.vm.network :forwarded_port, guest: 3000, host: 3000
 
-  config.vm.provision :shell, path: "bootstrap.sh", privileged: false
+  # Use Chef Solo to provision our virtual machine
+  config.vm.provision :chef_solo do |chef|
+    chef.cookbooks_path = ["cookbooks", "site-cookbooks"]
+
+    chef.add_recipe "apt"
+    chef.add_recipe "build-essential"
+    chef.add_recipe "system::install_packages"
+    chef.add_recipe "ruby_build"
+    chef.add_recipe "ruby_rbenv::user"
+    chef.add_recipe "ruby_rbenv::user_install"
+    chef.add_recipe "vim"
+    chef.add_recipe "postgresql::server"
+    chef.add_recipe "postgresql::client"
+
+    chef.json = {
+      rbenv: {
+        user_installs: [{
+          user: 'ubuntu',
+          rubies: ["2.3.1"],
+          global: "2.3.1",
+          gems: {
+          "2.3.1" => [{ name: "bundler" }]
+        }
+        }]
+      },
+      system: {
+        packages: {
+          install: ["redis-server", "nodejs", "libpq-dev"]
+        }
+      },
+      postgresql: {
+        :pg_hba => [{
+          :comment => "# Add vagrant role",
+          :type => 'local', :db => 'all', :user => 'ubuntu', :addr => nil, :method => 'trust'
+        }],
+        :users => [{
+          "username": "ubuntu",
+          "password": "welc0me",
+          "superuser": true,
+          "replication": false,
+          "createdb": true,
+          "createrole": false,
+          "inherit": false,
+          "login": true
+        }]
+      }
+    }
+  end
 end

@@ -44,5 +44,7 @@ bower.json
 #rubymine stuff
 .idea
 
+#vagrant
 .vagrant/
-*.log
+cookbooks/
+ubuntu-xenial-16.04-cloudimg-console.log
