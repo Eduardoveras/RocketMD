@@ -18,12 +18,15 @@ Versions
  
  
 ###Or use vagrant:
- 1. vagrant up
- 2. vagrant ssh
- 3. cd /vagrant
- 4. bundle
- 5. rake db:create && rake db:migrate
- 6. rails s
+ 1. Install vagrant and virtualbox
+ 2. vagrant plugin install vagrant-vbguest
+ 3. vagrant plugin install vagrant-librarian-chef-nochef
+ 4. vagrant up
+ 5. vagrant ssh
+ 6. cd /vagrant
+ 7. bundle
+ 8. rake db:create && rake db:migrate
+ 9. rails s
 
 
 That's it! Your app is running
