@@ -41,6 +41,10 @@ bower.json
 # Ignore Byebug command history file.
 .byebug_history
 
-
 #rubymine stuff
 .idea
+
+#vagrant
+.vagrant/
+cookbooks/
+ubuntu-xenial-16.04-cloudimg-console.log
