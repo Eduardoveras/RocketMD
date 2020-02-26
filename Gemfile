@@ -20,7 +20,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 #Assets
 gem 'font-awesome-rails'
-gem 'bootstrap', '~> 4.0.0.alpha6'
+gem 'bootstrap', '~> 4.3.1'
 gem 'pnotify-rails'
 gem 'unobtrusive_flash', '>=3'
 gem 'jquery-datatables'
