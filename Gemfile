@@ -29,7 +29,7 @@ gem 'bootstrap-datepicker-rails'
 
 
 #Admin panel gem
-gem 'rails_admin', '~> 1.1.1'
+gem 'rails_admin', '~> 1.4.3'
 
 # sendgrrid on heroku
 gem 'sendgrid-ruby'
